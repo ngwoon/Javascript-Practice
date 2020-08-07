@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="form">
+            <h1>Multiplication Practice!</h1>
+          
+            <br />
+            
+            <h2 id="question"></h2>
+            <div class="floating">
+              <input id="text_input" class="floating__input" type="text" placeholder="What is the answer?"/>
+              <label for="text_input" class="floating__label">
+              <span class="hidden--visually">
+                Answer</span></label>
+            </div>
+          
+            <button class="button" onclick="checkAnswer();" onkeydown="isEnter();">Submit</button>
+          </div>
+    </body>
+    <script>
+        function isEnter() {
+            if(event.keyCode == 13) {
+                checkAnswer();
+            }
+        }
+        function nextQuestion() {
+            num1 = parseInt(Math.random()*100);
+            num2 = parseInt(Math.random()*100);
+            answer = num1*num2;
+            
+            var question = document.getElementById('question');
+            question.innerHTML = num1 + " x " + num2 + " = ?";
+        }
+        function checkAnswer() {
+            var submitted = document.getElementById('text_input');
+            if(submitted.value === String(answer)) {
+                alert('Correct!');
+                submitted.value = "";
+                nextQuestion();
+            } else {
+                alert('Wrong!');
+                submitted.value = "";
+            }
+        }
+
+        var num1, num2, answer;
+        nextQuestion();
+    </script>
+</html>
