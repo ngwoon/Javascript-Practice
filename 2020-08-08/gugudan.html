@@ -24,24 +24,8 @@
           </div>
     </body>
     <script>
-        function sound(src) {
-            this.sound = document.createElement("audio");
-            this.sound.src = src;
-            this.sound.setAttribute("preload", "auto");
-            this.sound.setAttribute("controls", "none");
-            this.sound.setAttribute("allow", "auto");
-            this.sound.style.display = "none";
-            document.body.appendChild(this.sound);
-            this.play = function(){
-                this.sound.play();
-            }
-            this.stop = function(){
-                this.sound.pause();
-            }
-        }
 
-        var num1, num2, answer, time=10;
-        var timeout_sound = new sound("https://www.salamisound.com/6525146-alarm-clock-ringing-pitch#");
+        var num1, num2, answer, time;
         var intervalId;
 
         function isEnter() {
@@ -53,9 +37,8 @@
             var time_text = document.getElementById('time');
 
             if(time == 0) {
-                timeout_sound.play();
                 time_text.innerText = "Time Out!";
-                setTimeout(function() {timeout_sound.stop();}, 1000);
+                nextQuestion();
             } else {
                 time = time-1;
                 time_text.innerText = "Time --> 00 : 0" + time;
@@ -69,12 +52,14 @@
             var question = document.getElementById('question');
             question.innerHTML = num1 + " x " + num2 + " = ?";
             
+            time=10;
             clearInterval(intervalId);
             intervalId = setInterval(ticTok, 1000);
         }
         function checkAnswer() {
             var submitted = document.getElementById('text_input');
             if(submitted.value === String(answer)) {
+                clearInterval(intervalId);
                 alert('Correct!');
                 submitted.value = "";
                 nextQuestion();
