@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
+<script>
+    function movie(title) {
+        return {
+            'get_title': function() {
+                return title;
+            },
+            'set_title': function(_title) {
+                title = _title;
+            }
+        }
+    }
+
+    var m1 = movie("남자가 사랑할 때");
+    var m2 = movie("님아 그 강을 건너지 마오");
+
+    console.log(m1.get_title());
+    console.log(m2.get_title());
+
+    m1.set_title("어벤져스");
+    console.log(m1.get_title());
+    console.log(m2.get_title());
+</script>
+</html>
