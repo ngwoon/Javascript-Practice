@@ -1,0 +1,30 @@
+.piece {
+    border: 2px solid black;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+.board {
+    margin: 15px;
+}
+
+.black-stone {
+    border: 2px solid black;
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: black;
+    display: inline-block;
+}
+.white-stone {
+    border: 2px solid black;
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: red;
+    display: inline-block;
+}
