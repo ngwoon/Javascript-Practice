@@ -18,6 +18,7 @@ hr {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .center {
@@ -37,13 +38,15 @@ hr {
     font-style: italic;
     font-size: 20px;
     font-weight: bold;
-    color: #333333;
+    color: white;
+    -webkit-text-stroke: 1px black;
 }
 
 .quote-author {
     font-style: italic;
     font-size: 12px;
-    color: #333333;
+    color: white;
+    -webkit-text-stroke: 1px black;
 }
 
 .menu {
