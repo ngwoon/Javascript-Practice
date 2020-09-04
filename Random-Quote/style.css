@@ -1,0 +1,64 @@
+
+.body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    border: 2px gray solid;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.center {
+    position: relative;
+    top: 35%;
+    -webkit-transform: translateY(-35%);
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
+}
+
+.quote {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quote-content {
+    font-style: italic;
+    font-size: 20px;
+    color: #333333;
+}
+
+.quote-author {
+    font-style: italic;
+    font-size: 12px;
+    color: #333333;
+}
+
+.menu {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%);
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
