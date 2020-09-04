@@ -31,7 +31,7 @@ function getQuote() {
 }
 
 function init() {
-    fetch("https://api.unsplash.com/photos/random/?client_id=bS6Mcj574RjNJEwIEl81OVOBfSJjaEMIvBTnYpRLmWE&query=light").then(response => response.json())
+    fetch("https://api.unsplash.com/photos/random/?client_id=bS6Mcj574RjNJEwIEl81OVOBfSJjaEMIvBTnYpRLmWE&query=bright background").then(response => response.json())
     .then(json => {
         const bgImg = new Image();
         bgImg.classList.add("bgImage");
